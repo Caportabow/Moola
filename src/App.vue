@@ -3,7 +3,6 @@ import ThemeToggler from '@/components/helperComponents/ThemeToggler.vue'
 import InputField from '@/components/InputField.vue'
 import ExchangeStats from '@/components/ExchangeStats.vue'
 import { ref } from 'vue'
-import { TrendingUp } from 'lucide-vue-next'
 
 const monthLabels = [
   'January', 'February', 'March', 'April', 'May', 'June',

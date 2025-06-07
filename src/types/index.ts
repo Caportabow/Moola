@@ -21,7 +21,7 @@ export type CurrentRate = {
   date: string;
 };
 
-type Trend = "up" | "down" | "neutral";
+export type Trend = "up" | "down" | "neutral";
 
 export type Stats = {
   avgMTD: string;
@@ -34,3 +34,5 @@ export type Stats = {
   updatedAt: string;
   trend: Trend;
 };
+
+export type CurrencyFlags = Record<string, string>;

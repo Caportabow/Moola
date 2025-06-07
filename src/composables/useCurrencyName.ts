@@ -1,7 +1,9 @@
-import currencyFlags from './currency-flags.json'
-import type { CurrencyInfo } from "@/types";
+import rawCurrencyFlags from './currency-flags.json'
+import type { CurrencyInfo, CurrencyFlags } from "@/types";
 
+const currencyFlags: CurrencyFlags = rawCurrencyFlags;
 export function useCurrencyName(rate: CurrencyInfo) {
-  const flag = currencyFlags[rate.code.toUpperCase()] ?? '🏳️'
-  return `${flag} ${rate.name} (${rate.code.toUpperCase()})`
+  const code = rate.code.toUpperCase();
+  const flag = currencyFlags[code] ?? '🏳️';
+  return `${flag} ${rate.name} (${code})`;
 }
